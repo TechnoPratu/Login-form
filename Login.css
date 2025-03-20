@@ -1,0 +1,147 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    background-image: url(Login\ img.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Container for the form */
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: containerAnimation 1s ease-out;
+}
+
+/* Form box */
+.form-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    animation: formBoxAnimation 1s ease-out;
+}
+
+/* Heading */
+.form-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards 0.2s;
+}
+
+/* Input fields */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+    animation: inputGroupAnimation 1s ease-out;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Input field focus effect */
+.input-group input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Focused label */
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: #ff8c00;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #ff4081;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes containerAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes formBoxAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes inputGroupAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
